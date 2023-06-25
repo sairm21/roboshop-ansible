@@ -6,3 +6,6 @@
     name: nodejs
     state: latest
 
+- name: Application user setup
+  ansible.builtin.include_tasks:
+    file: app_user.yml
