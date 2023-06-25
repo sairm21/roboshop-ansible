@@ -9,3 +9,12 @@
 - name: Application user setup
   ansible.builtin.include_tasks:
     file: app_user.yml
+
+- name: Load nodejs dependencies
+  ansible.builtin.shell: npm i
+  args:
+    chdir: /app
+
+- name: systemd setup
+  ansible.builtin.include_tasks:
+    file: systemd_setup.yml
