@@ -1,5 +1,0 @@
-- name: Roboshop MongoDB setup
-  hosts: all
-  become: true
-  roles:
-    - MongoDB
