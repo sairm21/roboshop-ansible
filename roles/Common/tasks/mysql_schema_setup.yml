@@ -3,5 +3,5 @@
     name: mysql
     state: installed
 
-- name: configuring nodejs repos
+- name: Load schema
   ansible.builtin.shell: mysql -h mysql-dev.iamadevopsengineer.tech -uroot -pRoboShop@1 < /app/schema/{{ component }}.sql
