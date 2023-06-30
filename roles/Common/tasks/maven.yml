@@ -8,9 +8,8 @@
     file: app_user.yml
 
 - name: Download Maven dependencies
-  ansible.builtin.shell: mvn clean package ; mv target/{{ component }}-1.0.jar {{ component }}.jar
-  args:
-    chdir: /app
+  ansible.builtin.shell: cd /app ; mvn clean package ; mv target/{{ component }}-1.0.jar {{ component }}.jar
+
 
 - name: mysql setup
   ansible.builtin.include_tasks:
