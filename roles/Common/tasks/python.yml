@@ -11,7 +11,9 @@
     file: app_user.yml
 
 - name: Download python dependencies
-  ansible.builtin.shell: cd /app ; pip3.6 install -r requirements.txt
+  ansible.builtin.shell: pip3.6 install -r requirements.txt
+  args:
+    chdir: /app
 
 - name: systemd setup
   ansible.builtin.include_tasks:
