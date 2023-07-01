@@ -2,7 +2,7 @@
   ansible.builtin.yum:
     name:
       - python36
-      - python36
+      - gcc
       - python3-devel
     state: installed
 
