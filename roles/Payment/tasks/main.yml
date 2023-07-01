@@ -2,8 +2,3 @@
   ansible.builtin.import_role:
     name: Common
     tasks_from: python.yml
-
-- name: Load mongoDB schema
-  ansible.builtin.import_role:
-    name: Common
-    tasks_from: mongo_schema_setup.yml
